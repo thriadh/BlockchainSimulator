@@ -44,3 +44,7 @@ void SmartContract::printState() {
               << stateValue
               << std::endl;
 }
+
+int SmartContract::getStateValue() {
+    return stateValue;
+}

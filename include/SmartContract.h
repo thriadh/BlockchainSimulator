@@ -13,6 +13,8 @@ public:
 
     void execute(std::string command);
 
+    int getStateValue();
+    
     void printState();
 };
 

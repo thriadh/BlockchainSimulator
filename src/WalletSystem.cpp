@@ -51,3 +51,7 @@ void WalletSystem::printBalances() {
                   << std::endl;
     }
 }
+
+double WalletSystem::getBalance(std::string name) {
+    return balances[name];
+}

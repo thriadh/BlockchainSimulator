@@ -77,11 +77,89 @@ void testBlockchainValidation() {
     }
 }
 
+void testGetBalance() {
+
+    std::cout << "\n=== Get Balance Test ==="
+              << std::endl;
+
+    WalletSystem wallets;
+
+    wallets.createWallet("Alice", 100);
+
+    if (wallets.getBalance("Alice") == 100) {
+
+        std::cout << "GetBalance PASSED"
+                  << std::endl;
+    }
+    else {
+
+        std::cout << "GetBalance FAILED"
+                  << std::endl;
+    }
+}
+
+
+void testGetStateValue() {
+
+    std::cout << "\n=== Get State Value Test ==="
+              << std::endl;
+
+    SmartContract contract("Test");
+
+    contract.execute("INCREMENT");
+
+    if (contract.getStateValue() == 1) {
+
+        std::cout << "GetStateValue PASSED"
+                  << std::endl;
+    }
+    else {
+
+        std::cout << "GetStateValue FAILED"
+                  << std::endl;
+    }
+}
+
+
+void testTransferFailure() {
+
+    std::cout << "\n=== Transfer Failure Test ==="
+              << std::endl;
+
+    WalletSystem wallets;
+
+    wallets.createWallet("Alice", 50);
+
+    bool result = wallets.transfer(
+        "Alice",
+        "Bob",
+        100
+    );
+
+    if (!result) {
+
+        std::cout << "TransferFailure PASSED"
+                  << std::endl;
+    }
+    else {
+
+        std::cout << "TransferFailure FAILED"
+                  << std::endl;
+    }
+}
+
+
 int main() {
 
     testWalletSystem();
 
+    testGetBalance();
+
+    testTransferFailure();
+
     testSmartContract();
+
+    testGetStateValue();
 
     testBlockchainValidation();
 

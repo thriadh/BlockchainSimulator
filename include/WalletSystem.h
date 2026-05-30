@@ -19,6 +19,8 @@ public:
         double amount
     );
 
+    double getBalance(std::string name);
+
     void printBalances();
 };
 
