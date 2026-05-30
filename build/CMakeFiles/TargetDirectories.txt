@@ -1,4 +1,0 @@
-C:/Users/LIAN LI LANCOOL 207/OneDrive/Desktop/BlockchainProject/build/CMakeFiles/BlockchainSimulator.dir
-C:/Users/LIAN LI LANCOOL 207/OneDrive/Desktop/BlockchainProject/build/CMakeFiles/BlockchainTests.dir
-C:/Users/LIAN LI LANCOOL 207/OneDrive/Desktop/BlockchainProject/build/CMakeFiles/edit_cache.dir
-C:/Users/LIAN LI LANCOOL 207/OneDrive/Desktop/BlockchainProject/build/CMakeFiles/rebuild_cache.dir
